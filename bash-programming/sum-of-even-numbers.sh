@@ -1,17 +1,16 @@
 read n
 
-i = 0
-sum = 0
+sum=0
+count=0
 
-while [[ i -lt n ]]
+while [[ count -lt n ]]
 do
-    read l
-
-    if [[ $(expr $l % 2) == 0 ]]
+    read line
+    if [[ $(expr $line % 2) == 0 ]]
     then
-        let sum=sum+$lt
+        let sum=sum+$line
     fi
-    let i=i+1
+    let count=count+1
 done
 
 echo "Total = $sum"
