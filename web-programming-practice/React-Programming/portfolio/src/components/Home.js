@@ -12,8 +12,12 @@ class Home extends React.Component {
     }
 
     render() {
-        return(
-          <NavigationBar title={this.state.title} /> 
+        return (
+            <div>
+                <NavigationBar title={this.state.title} />
+            </div>
         )
     }
 }
+
+export default Home;
