@@ -1,33 +1,19 @@
 import React from 'react';
-import './App.css';
-import About from './About'
 
 class App extends React.Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      aboutButtonUsed: false
+      title: "Tulasi Jagan",
     }
   }
 
-  navigateToAboutPage = () => this.setState({aboutButtonUsed: !this.state.aboutButtonUsed})
-
   render() {
     return (
-      <div className="App">
-        
-          <h1>Hi, there !!!</h1>
-          <h2>I'm Tulasi Jagan</h2>
-          <p> a software programmer.</p>
-          <p> On my way to be a developer :)</p>
-          <button onClick={this.navigateToAboutPage}> About </button>
-          {this.state.aboutButtonUsed ? <About /> : null}
-            
-      </div>
+      <Home title={this.state.title}/>
     );
   }
-
 }
 
 export default App;
